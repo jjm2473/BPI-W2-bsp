@@ -1,0 +1,4 @@
+*.o
+*.bin
+onchip
+onchip.exe
