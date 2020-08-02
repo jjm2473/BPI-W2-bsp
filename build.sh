@@ -108,10 +108,11 @@ echo "	   kernel and rootfs build out"
 echo "	6. Create bsp update packages for BPI SD Images"
 echo "	7. Update local build to SD with BPI Image flashed"
 echo "	8. Clean all build."
+echo "	u. Build usbflash."
 echo "--------------------------------------------------------------------------------"
 
 if [ -z "$MODE" ]; then
-	read -p "Please choose a mode(1-7): " mode
+	read -p "Please choose a mode(1-7,u): " mode
 	echo
 else
 	mode=$MODE
@@ -137,6 +138,7 @@ case $mode in
 	6) cp_download_files;;
 	7) make install;;
 	8) make clean;;
+	u) make usbflash;;
 esac
 echo
 

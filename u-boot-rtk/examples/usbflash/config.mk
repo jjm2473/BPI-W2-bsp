@@ -1,0 +1,2 @@
+TARGET_ARCH=aarch64
+

@@ -14,6 +14,7 @@
 */
 
 #include <linux/compiler.h>
+#include <linux/types.h>
 
 #ifndef _DISK_PART_EFI_H
 #define _DISK_PART_EFI_H

@@ -36,6 +36,10 @@ u-boot:
 	$(Q)$(MAKE) -C u-boot-rtk $(UBOOT_CONFIG) CROSS_COMPILE=$(U_CROSS_COMPILE)
 	$(Q)$(MAKE) -C u-boot-rtk all CROSS_COMPILE=$(U_CROSS_COMPILE) BUILD_BOOTCODE_ONLY=true
 
+usbflash: 
+	$(Q)$(MAKE) -C u-boot-rtk $(UBOOT_CONFIG) CROSS_COMPILE=$(U_CROSS_COMPILE)
+	$(Q)$(MAKE) -C u-boot-rtk usbflash CROSS_COMPILE=$(U_CROSS_COMPILE) BUILD_BOOTCODE_ONLY=true
+
 u-boot-clean:
 	$(Q)$(MAKE) -C u-boot-rtk CROSS_COMPILE=$(U_CROSS_COMPILE) distclean
 

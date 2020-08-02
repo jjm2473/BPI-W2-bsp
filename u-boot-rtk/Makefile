@@ -955,6 +955,11 @@ ifeq ($(CONFIG_DM_I2C_COMPAT),y)
 endif
 endif
 
+usbflash: 
+	$(MAKE) -j1 -C examples/usbflash all PRJ=$(PRJ) CUSTOMER_ID=$(CUSTOMER_ID) \
+		CHIP_ID=$(CHIP_ID) CHIP_TYPE=$(CHIP_TYPE) FLASH_TYPE=$(FLASH_TYPE) CC=$(CC) LD=$(LD) \
+		OBJCOPY=$(OBJCOPY) OBJDUMP=$(OBJDUMP) CPU=$(CPU)
+
 PHONY += dtbs
 dtbs dts/dt.dtb: checkdtc u-boot
 	$(Q)$(MAKE) $(build)=dts dtbs
